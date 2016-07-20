@@ -8,8 +8,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
-
 using SQLiteManager.Core;
 using SQLiteManager.Core.Utilities;
 using SQLiteManager.Gui.TreeNodes;
@@ -132,6 +132,7 @@ namespace SQLiteManager.Gui
 						listViewItem.ImageIndex = column.PrimaryKey ? (int)DatabasesTreeViewImageIndex.Key : (int)DatabasesTreeViewImageIndex.Column;
 						listViewItem.SubItems.Add(column.Type);
 					}
+					selectedTableStructureListView.KeyUp += new KeyEventHandler(selectedTableStructureListView_KeyUp);
 				}
 				
 				if (TableSelected != null) {
@@ -151,11 +152,31 @@ namespace SQLiteManager.Gui
 						listViewItem.ImageIndex = column.PrimaryKey ? (int)DatabasesTreeViewImageIndex.Key : (int)DatabasesTreeViewImageIndex.Column;
 						listViewItem.SubItems.Add(column.Type);
 					}
+					selectedTableStructureListView.KeyUp += new KeyEventHandler(selectedTableStructureListView_KeyUp);
 				}
 				if (IndexSelected != null) {
 					IndexSelected(this, new IndexSelectedEventArgs(indextTreeNode.DatabaseId, indextTreeNode.IndexName));
 				}
 			}
+		}
+
+		void selectedTableStructureListView_KeyUp(object sender, KeyEventArgs e)
+		{
+			if (sender != selectedTableStructureListView) {
+				return;
+			}
+			if (e.Control && e.KeyCode == Keys.C) {
+				CopySelectedColumnToClipboard();
+			}
+		}
+		
+		void CopySelectedColumnToClipboard()
+		{
+			var s = new StringBuilder();
+			foreach (ListViewItem li in selectedTableStructureListView.SelectedItems) {
+				s.AppendLine(li.SubItems[0].Text);
+			}
+			Clipboard.SetText(s.ToString());
 		}
 
 		private void SetAccessToIndexButtons(TreeNode node)
