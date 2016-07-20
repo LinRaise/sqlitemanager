@@ -1,5 +1,0 @@
-C:\projects\sqlitemanager\bin\SQLiteManager.Core.dll
-C:\projects\sqlitemanager\bin\SQLiteManager.Core.pdb
-C:\projects\sqlitemanager\src\SQLiteManager.Core\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\projects\sqlitemanager\src\SQLiteManager.Core\obj\x86\Debug\SQLiteManager.Core.dll
-C:\projects\sqlitemanager\src\SQLiteManager.Core\obj\x86\Debug\SQLiteManager.Core.pdb

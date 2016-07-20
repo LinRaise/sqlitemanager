@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{69783419-E468-44F1-B4A8-2D8175E0E436}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SQLiteManager</RootNamespace>
+    <AssemblyName>sqlitemanager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SourceAnalysisOverrideSettingsFile>C:\ian\projects\themanager\src\Settings.StyleCop</SourceAnalysisOverrideSettingsFile>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <ApplicationIcon>database_connect.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>6F27FB4C04F58BE589D2D1D96F10A57AADE69274</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SQLiteManager_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>http://themanager.codeplex.com/releases/clickonce/</InstallUrl>
+    <SupportUrl>http://themanager.codeplex.com/</SupportUrl>
+    <ErrorReportUrl>http://themanager.codeplex.com/WorkItem/Create</ErrorReportUrl>
+    <ProductName>SQLite Manager</ProductName>
+    <PublisherName>CodePlex</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>0.1.5.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <RunSourceAnalysis>False</RunSourceAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\bin</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\dist</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="ICSharpCode.TextEditor">
+      <HintPath>..\..\lib\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApplicationResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDatabaseDependentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseDatabaseDependentControl.Designer.cs">
+      <DependentUpon>BaseDatabaseDependentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\BaseUserControl.Designer.cs">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\DatabaseCommands.cs" />
+    <Compile Include="Commands\FileCommands.cs" />
+    <Compile Include="Commands\HelpCommands.cs" />
+    <Compile Include="Commands\QueryCommands.cs" />
+    <Compile Include="Commands\WindowCommands.cs" />
+    <Compile Include="Gui\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ColumnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ColumnForm.Designer.cs">
+      <DependentUpon>ColumnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ColumnsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ColumnsList.Designer.cs">
+      <DependentUpon>ColumnsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DatabaseListPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\DatabaseListPane.Designer.cs">
+      <DependentUpon>DatabaseListPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DataTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\EditorTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\FormPositioning\ApplicationFormsPositions.cs" />
+    <Compile Include="Gui\FormPositioning\FormPositionInfo.cs" />
+    <Compile Include="Gui\ImageViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ImageViewerForm.Designer.cs">
+      <DependentUpon>ImageViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\IndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\IndexForm.Designer.cs">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\IndexSelectedEventArgs.cs" />
+    <Compile Include="Gui\IndexTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MessageTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\QueryAndResultPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\QueryAndResultPane.Designer.cs">
+      <DependentUpon>QueryAndResultPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\QueryPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\QueryPane.Designer.cs">
+      <DependentUpon>QueryPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ResultsTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\ResultTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\SqlSyntaxHighlighting\AppSyntaxModeProvider.cs" />
+    <Compile Include="Gui\TableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\TableForm.Designer.cs">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\TablePane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\TablePane.Designer.cs">
+      <DependentUpon>TablePane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\TableSelectedEventArgs.cs" />
+    <Compile Include="Gui\TablesPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\TablesPane.Designer.cs">
+      <DependentUpon>TablesPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\TreeNodes\ColumnTreeNode.cs" />
+    <Compile Include="Gui\TreeNodes\DatabaseTreeNode.cs" />
+    <Compile Include="Gui\TreeNodes\DbObjectTreeNode.cs" />
+    <Compile Include="Gui\TreeNodes\IndexTreeNode.cs" />
+    <Compile Include="Gui\TreeNodes\TableTreeNode.cs" />
+    <Compile Include="Gui\ViewerIndexPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ViewerIndexPane.Designer.cs">
+      <DependentUpon>ViewerIndexPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ViewerTablePane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ViewerTablePane.Designer.cs">
+      <DependentUpon>ViewerTablePane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ComboBoxItem.cs" />
+    <Compile Include="Util\DatabaseChangedEventArgs.cs" />
+    <Compile Include="Util\DefaultMenu.cs" />
+    <Compile Include="Util\IDatabaseDepedentControl.cs" />
+    <Compile Include="Util\ImageUtility.cs" />
+    <Compile Include="Util\IUnwireableControl.cs" />
+    <Compile Include="Util\ResourceUtility.cs" />
+    <Compile Include="Util\XToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\XToolStripDatabasesComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\XToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkbenchSingleton.cs" />
+    <EmbeddedResource Include="ApplicationResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\BaseUserControl.resx">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ColumnForm.resx">
+      <DependentUpon>ColumnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ColumnsList.resx">
+      <DependentUpon>ColumnsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DatabaseListPane.resx">
+      <DependentUpon>DatabaseListPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ImageViewerForm.resx">
+      <DependentUpon>ImageViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\IndexForm.resx">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\QueryAndResultPane.resx">
+      <DependentUpon>QueryAndResultPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\QueryPane.resx">
+      <DependentUpon>QueryPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\TableForm.resx">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\TablePane.resx">
+      <DependentUpon>TablePane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\TablesPane.resx">
+      <DependentUpon>TablesPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ViewerIndexPane.resx">
+      <DependentUpon>ViewerIndexPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ViewerTablePane.resx">
+      <DependentUpon>ViewerTablePane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SqlSyntaxHighlighting\SQL-Mode.xshd" />
+    <EmbeddedResource Include="Gui\SqlSyntaxHighlighting\SyntaxModes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Профиль клиента .NET Framework</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <ProjectReference Include="..\SQLiteManager.Core\SQLiteManager.Core.csproj">
+      <Project>{D0A9E2BC-362D-4FE7-9D3D-10B2B64B9B9D}</Project>
+      <Name>SQLiteManager.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database_connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\plugins\Workbench.xml">
+      <Link>Workbench.xml</Link>
+    </None>
+  </ItemGroup>
+</Project>
