@@ -1,0 +1,35 @@
+﻿<Plugin>
+	<Menu>
+		<MenuItem Text="File">
+			<MenuItem Text="Open SQL Script..." Command="SQLiteManager.Commands.OpenFile2, sqlitemanager" />
+			<MenuItem Text="-" />
+			<MenuItem Text="Save" Command="SQLiteManager.Commands.SaveFile2, sqlitemanager" />
+			<MenuItem Text="Save As" Command="SQLiteManager.Commands.SaveFileAs2, sqlitemanager" />
+			<MenuItem Text="-" />
+			<MenuItem Text="Exit" Command="SQLiteManager.Commands.ExitCommand, sqlitemanager" />
+		</MenuItem>
+		<MenuItem Text="Database">
+			<MenuItem Text="Create Database..." Command="SQLiteManager.Commands.CreateDatabase2, sqlitemanager" />
+			<MenuItem Text="-" />
+			<MenuItem Text="Open Database..." Command="SQLiteManager.Commands.OpenDatabase2, sqlitemanager" />
+			<MenuItem Text="Close Database" Command="SQLiteManager.Commands.CloseDatabase2, sqlitemanager" />
+			<MenuItem Text="-" />
+			<MenuItem Text="Export Database" Command="SQLiteManager.Commands.ExportDatabase2, sqlitemanager" />
+		</MenuItem>
+		<MenuItem Text="Query">
+			<MenuItem Text="Add Query" Command="SQLiteManager.Commands.AddQuery2, sqlitemanager" />
+			<MenuItem Text="Execute Query" Command="SQLiteManager.Commands.ExecuteQuery2, sqlitemanager" />
+			<MenuItem Text="Execute All" Command="SQLiteManager.Commands.ExecuteAllQuery2, sqlitemanager" />
+		</MenuItem>
+		<MenuItem Text="Window">
+			<MenuItem Text="Close" />
+			<MenuItem Text="Close All" />
+		</MenuItem>
+		<MenuItem Text="?">
+			<MenuItem Text="About..." Command="SQLiteManager.Commands.ShowAbout, sqlitemanager" />
+		</MenuItem>
+	</Menu>
+	<ToolBar>
+		<ToolBarButton Text="Open Database..." Command="SQLiteManager.Commands.OpenDatabase2, sqlitemanager" />
+	</ToolBar>
+</Plugin>
