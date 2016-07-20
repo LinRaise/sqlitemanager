@@ -2,3 +2,7 @@
 /src/SQLiteManager/obj
 /src/SQLiteManager.Core/obj
 /src/SQLiteManager.Tests/obj
+/src/Backup
+/src/_UpgradeReport_Files
+/src/UpgradeLog.htm
+/src/UpgradeLog.XML

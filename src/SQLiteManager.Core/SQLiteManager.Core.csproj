@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{D0A9E2BC-362D-4FE7-9D3D-10B2B64B9B9D}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,6 +14,11 @@
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -65,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ColumnValidationResult.cs" />
-	<Compile Include="Models\ColumnValidator.cs" />
+    <Compile Include="Models\ColumnValidator.cs" />
     <Compile Include="Models\IndexValidationResult.cs" />
     <Compile Include="Models\IndexValidator.cs" />
     <Compile Include="Models\IValidatable.cs" />
@@ -82,7 +87,7 @@
     <Compile Include="Models\DatabaseManager.cs" />
     <Compile Include="Models\Index.cs" />
     <Compile Include="Models\Dao\ITableDao.cs" />
-	<Compile Include="Models\IValidator.cs" />
+    <Compile Include="Models\IValidator.cs" />
     <Compile Include="Models\Dao\SQLiteTableDao.cs" />
     <Compile Include="Models\Query2.cs" />
     <Compile Include="Models\Plugin.cs">
