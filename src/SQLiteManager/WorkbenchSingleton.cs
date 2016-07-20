@@ -18,20 +18,9 @@ namespace SQLiteManager
 			get { return workbench; }
 		}
 		
-//		public static MainForm MainForm {
-//			get { return workbench as MainForm; }
-//		}
-		
 		public static Form MainForm {
 			get { return workbench as Form; }
 		}
-		
-//		public static MainForm MainForm { get; private set; }
-
-//	    public static void Attach(MainForm form)
-//		{
-//		            MainForm = form;
-//		}
 		
 		public static DialogResult ShowDialogView(Form form)
 		{
