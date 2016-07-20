@@ -1,1 +1,4 @@
 /bin
+/src/SQLiteManager/obj
+/src/SQLiteManager.Core/obj
+/src/SQLiteManager.Tests/obj
