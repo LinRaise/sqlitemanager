@@ -105,7 +105,7 @@ namespace SQLiteManager.Gui
 			this.linkLabelLink.Size = new System.Drawing.Size(184, 23);
 			this.linkLabelLink.TabIndex = 6;
 			this.linkLabelLink.TabStop = true;
-			this.linkLabelLink.Text = "http://themanager.codeplex.com/";
+			this.linkLabelLink.Text = "https://github.com/iescarro/sqlitemanager";
 			this.linkLabelLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelLinkLinkClicked);
 			// 
 			// AboutForm
