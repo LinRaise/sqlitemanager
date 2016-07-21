@@ -7,3 +7,4 @@
 /src/UpgradeLog.htm
 /src/UpgradeLog.XML
 src/SQLiteManager.v11.suo
+*.user
