@@ -1,0 +1,4 @@
+language: csharp
+solution: src/SQLiteManager.sln
+install:
+    - nuget restore src/SQLiteManager.sln

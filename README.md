@@ -1,4 +1,7 @@
 # sqlitemanager v0.1 beta
+
+![build](https://travis-ci.org/iescarro/sqlitemanager.svg?branch=master)
+
 This is a simple SQLite manager
 
 ## Installation
