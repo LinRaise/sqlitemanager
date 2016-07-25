@@ -50,6 +50,9 @@
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
     <Reference Include="nunit.framework">
@@ -102,8 +105,5 @@
     <None Include="test.sqlite">
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers" />
-    <Folder Include="Models" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

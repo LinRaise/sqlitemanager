@@ -1,7 +1,6 @@
 /bin
-/src/SQLiteManager/obj
-/src/SQLiteManager.Core/obj
-/src/SQLiteManager.Tests/obj
+/src/**/obj
+/src/**/bin
 /src/Backup
 /src/_UpgradeReport_Files
 /src/UpgradeLog.htm
