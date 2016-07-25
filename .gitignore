@@ -8,3 +8,7 @@
 /src/UpgradeLog.XML
 src/SQLiteManager.v11.suo
 *.user
+src/SQLiteManager.Core/StyleCopViolations.xml
+src/SQLiteManager/SQLiteManager.OpenCover.Settings
+src/SQLiteManager.Core/StyleCop.Cache
+src/SQLiteManager.Core/SQLiteManager.Core.OpenCover.Settings
